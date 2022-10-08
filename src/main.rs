@@ -10,9 +10,12 @@ use indicatif::ProgressBar;
 use zip::{write::FileOptions, ZipWriter};
 
 #[derive(Parser, Debug)]
+#[command(author, version, about, long_about = None)]
 struct Args {
+    /// 文件路径
     #[arg(short, long)]
     path: Option<String>,
+    /// 文件拓展名
     #[arg(short, long)]
     exp: Option<String>,
 }
